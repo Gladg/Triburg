@@ -1,0 +1,96 @@
+<section data-ng-controller="ProcessProgramsController">
+    <div class="page-header">
+        <h1>New Process program</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+	<label class="control-label" for="processName">Process Name</label>
+	<div class="controls">
+	<input type="text" data-ng-model="processName" id="processName" class="form-control" placeholder="Eg: First process" required>
+</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="orderNo">Order Number</label>
+	<div class="controls">
+	<input type="text" data-ng-model="orderNo" id="orderNo" class="form-control" placeholder="Eg: 34563" required>
+</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="styleNo">Style Number</label>
+	<div class="controls">
+	<input type="text" data-ng-model="styleNo" id="styleNo" class="form-control" placeholder="Eg: 00067" required>
+</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="workOrderNo">Work Order Number</label>
+	<div class="controls">
+	<input type="text" data-ng-model="workOrderNo" id="workOrderNo" class="form-control" placeholder="Eg: 12367" required>
+</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="workOrderDate">Work Order date</label>
+	<div class="controls">
+	<input type="text" data-ng-model="workOrderDate" id="workOrderDate" class="form-control" placeholder="DD/MM/YYYY" required>
+</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="party">Party Name</label>
+	<div class="controls">
+	<input type="text" data-ng-model="party" id="party" class="form-control" placeholder="Eg: HariGopal Associates" required>
+</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="requiredDate">Required date</label>
+	<div class="controls">
+	<input type="text" data-ng-model="requiredDate" id="requiredDate" class="form-control" placeholder="DD/MM/YYYY" required>
+</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="remarks">Remarks</label>
+	<div class="controls">
+	<input type="text" data-ng-model="remarks" id="remarks" class="form-control" placeholder="Type in your remarks" required>
+</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="slNo">Serial Number</label>
+	<div class="controls">
+	<input type="text" data-ng-model="slNo" id="slNo" class="form-control" placeholder="Eg: 345623" required>
+</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="refNo">Reference Number</label>
+	<div class="controls">
+	<input type="text" data-ng-model="refNo" id="refNo" class="form-control" placeholder="Eg: 345423" required>
+</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="color">Product Color</label>
+	<div class="controls">
+	<input type="text" data-ng-model="color" id="color" class="form-control" placeholder="Eg: Orange" required>
+</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="specification">Product Specification</label>
+	<div class="controls">
+	<input type="text" data-ng-model="specification" id="specification" class="form-control" placeholder="Type in the various specs" required>
+</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="quantity">Product Quantity</label>
+	<div class="controls">
+	<input type="text" data-ng-model="quantity" id="quantity" class="form-control" placeholder="Eg: 135" required>
+</div>
+</div>
+
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
