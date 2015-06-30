@@ -1,0 +1,95 @@
+<section data-ng-controller="AccessoriesPurchaseOrdersController">
+    <div class="page-header">
+        <h1>New Accessories purchase order</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="orderNo">Order No.</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="orderNo" id="orderNo" class="form-control" placeholder="12345" required>
+                    </div>
+                </div>
+		<div class="form-group">
+	<label class="control-label" for="styleNo">Style No.</label>
+	<div class="controls">
+		<input type="text" data-ng-model="styleNo" id="styleNo" class="form-control" placeholder="1234" required>
+	</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="poDate">Purchase date</label>
+	<div class="controls">
+		<input type="text" data-ng-model="poDate" id="poDate" class="form-control" placeholder="DD/MM/YYYY" required>
+	</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="poNo">Purchase Order No.</label>
+	<div class="controls">
+		<input type="text" data-ng-model="poNo" id="poNo" class="form-control" placeholder="123456" required>
+	</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="orderQuantity">Order quantity</label>
+	<div class="controls">
+		<input type="text" data-ng-model="orderQuantity" id="orderQuantity" class="form-control" placeholder="eg: 100" required>
+	</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="supplier">Supplier Name</label>
+	<div class="controls">
+		<input type="text" data-ng-model="supplier" id="supplier" class="form-control" placeholder="Southern Rock Groups" required>
+	</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="specialNote">Special Note</label>
+	<div class="controls">
+		<input type="text" data-ng-model="specialNote" id="specialNote" class="form-control" placeholder="Give your remarks" required>
+	</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="slNo">Serial No.</label>
+	<div class="controls">
+		<input type="text" data-ng-model="slNo" id="slNo" class="form-control" placeholder="123456" required>
+	</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="itemName">Item name</label>
+	<div class="controls">
+		<input type="text" data-ng-model="itemName" id="itemName" class="form-control" placeholder="greem color banana" required>
+	</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="uom">Unit of Measurement</label>
+	<div class="controls">
+		<input type="text" data-ng-model="uom" id="uom" class="form-control" placeholder="eg: Kgs" required>
+	</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="units">Units</label>
+	<div class="controls">
+		<input type="text" data-ng-model="units" id="units" class="form-control" placeholder="55" required>
+	</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="requiredDate">Required date</label>
+	<div class="controls">
+		<input type="text" data-ng-model="requiredDate" id="requiredDate" class="form-control" placeholder="DD/MM/YYYY" required>
+	</div>
+</div>
+<div class="form-group">
+	<label class="control-label" for="remarks">User Remarks</label>
+	<div class="controls">
+		<input type="text" data-ng-model="remarks" id="remarks" class="form-control" placeholder="Post your remarks here" required>
+	</div>
+</div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
