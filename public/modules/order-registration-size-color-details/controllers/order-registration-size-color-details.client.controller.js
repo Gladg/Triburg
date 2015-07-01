@@ -9,7 +9,11 @@ angular.module('order-registration-size-color-details').controller('OrderRegistr
 		$scope.create = function() {
 			// Create new Order registration size color detail object
 			var orderRegistrationSizeColorDetail = new OrderRegistrationSizeColorDetails ({
-				name: this.name
+				sLNo: this.sLNo,
+				color: this.color,
+				size: this.size,
+				quantity: this.quantity
+
 			});
 
 			// Redirect after save

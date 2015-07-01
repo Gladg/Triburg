@@ -10,10 +10,28 @@ var mongoose = require('mongoose'),
  * Order registration size color detail Schema
  */
 var OrderRegistrationSizeColorDetailSchema = new Schema({
-	name: {
+	sLNo: {
+		type: Number,
+		default: '',
+		required: 'Please fill Order serial number',
+		trim: false
+	},
+	color: {
 		type: String,
 		default: '',
-		required: 'Please fill Order registration size color detail name',
+		required: 'Please fill color',
+		trim: false
+	},
+	size: {
+		type: Number,
+		default: '',
+		required: 'Please fill size',
+		trim: false
+	},
+	quantity: {
+		type: Number,
+		default: '',
+		required: 'Please fill quantity',
 		trim: true
 	},
 	created: {
@@ -27,3 +45,5 @@ var OrderRegistrationSizeColorDetailSchema = new Schema({
 });
 
 mongoose.model('OrderRegistrationSizeColorDetail', OrderRegistrationSizeColorDetailSchema);
+
+
