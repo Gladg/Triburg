@@ -9,18 +9,18 @@ angular.module('process-programs').controller('ProcessProgramsController', ['$sc
 		$scope.create = function() {
 			// Create new Process program object
 			var processProgram = new ProcessPrograms ({
-				processName: this.processName
-				orderNo: this.orderNo
-				styleNo: this.styleNo
-				workOrderNo: this.workOrderNo
-				workOrderDate: this.workOrderDate
-				party: this.party
-				requiredDate: this.requiredDate
-				remarks: this.remarks
-				slNo: this.slNo
-				refNo: this.refNo
-				color: this.color
-				specification: this.specification
+				processName: this.processName,
+				orderNo: this.orderNo,
+				styleNo: this.styleNo,
+				workOrderNo: this.workOrderNo,
+				workOrderDate: this.workOrderDate,
+				party: this.party,
+				requiredDate: this.requiredDate,
+				remarks: this.remarks,
+				slNo: this.slNo,
+				refNo: this.refNo,
+				color: this.color,
+				specification: this.specification,
 				quantity: this.quantity
 				
 			});

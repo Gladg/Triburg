@@ -1,0 +1,19 @@
+<section data-ng-controller="FinishingActivityRegistersController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Finishing activity registers</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="finishingActivityRegister in finishingActivityRegisters" data-ng-href="#!/finishing-activity-registers/{{finishingActivityRegister._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="finishingActivityRegister.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="finishingActivityRegister.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="finishingActivityRegister.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!finishingActivityRegisters.$resolved || finishingActivityRegisters.length">
+    	No Finishing activity registers yet, why don't you <a href="/#!/finishing-activity-registers/create">create one</a>?
+    </div>
+</section>
