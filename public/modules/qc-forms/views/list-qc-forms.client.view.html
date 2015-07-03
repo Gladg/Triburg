@@ -1,0 +1,19 @@
+<section data-ng-controller="QcFormsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Qc forms</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="qcForm in qcForms" data-ng-href="#!/qc-forms/{{qcForm._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="qcForm.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="qcForm.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="qcForm.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!qcForms.$resolved || qcForms.length">
+    	No Qc forms yet, why don't you <a href="/#!/qc-forms/create">create one</a>?
+    </div>
+</section>

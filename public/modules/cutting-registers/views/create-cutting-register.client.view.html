@@ -1,0 +1,63 @@
+<section data-ng-controller="CuttingRegistersController">
+    <div class="page-header">
+        <h1>New Cutting register</h1>
+    </div>
+    <div class="col-md-12">
+        <form data-ng-submit="create()" novalidate>
+            <fieldset>
+	<div class="row">
+                <div class="form-group col-md-2">
+                    <label class="control-label" for="orderNo">Order number</label>
+                        <input type="text" data-ng-model="orderNo" id="orderNo" class="form-control" placeholder="Eg: 000732" required>
+                </div>
+		 <div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="styleNo">Style number</label>
+                        <input type="text" data-ng-model="styleNo" id="styleNo" class="form-control" placeholder="Eg: 000234" required>
+                </div>
+		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="bundleNo">Bundle number</label>
+                        <input type="text" data-ng-model="bundleNo" id="bundleNo" class="form-control" placeholder="Eg: 00023" required>
+                </div>
+		 <div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="lotNo">Lot number</label>
+                        <input type="text" data-ng-model="lotNo" id="lotNo" class="form-control" placeholder="Eg: 00045" required>
+                </div>
+	</div>
+	<div class="row">
+		 <div class="form-group col-md-2">
+                    <label class="control-label" for="registerDate">Register date</label>
+                        <input type="text" data-ng-model="registerDate" id="registerDate" class="form-control" placeholder="DD/MM/YYYY" required>
+                </div>
+		 <div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="color">Color</label>
+                        <input type="text" data-ng-model="color" id="color" class="form-control" placeholder="Eg: Orange" required>
+                </div>
+		 <div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="size">Size</label>
+                        <input type="text" data-ng-model="size" id="size" class="form-control" placeholder="Eg: XL" required>
+                </div>
+	</div>
+	<div class="row">
+		 <div class="form-group col-md-2">
+                    <label class="control-label" for="pcs">Pieces</label>
+                        <input type="text" data-ng-model="pcs" id="pcs" class="form-control" placeholder="Eg: 670" required>
+                </div>
+		 <div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="cM">Centimeters</label>
+                        <input type="text" data-ng-model="cM" id="cM" class="form-control" placeholder="Eg: 50" required>
+                </div>
+		 <div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="preparedBy">Prepared By</label>
+                        <input type="text" data-ng-model="preparedBy" id="preparedBy" class="form-control" placeholder="Eg: Lineman 1" required>
+                </div>
+	</div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

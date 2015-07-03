@@ -1,0 +1,59 @@
+<section data-ng-controller="OrderEnquiryFormsController">
+    <div class="page-header">
+        <h1>New Order enquiry form</h1>
+    </div>
+    <div class="col-md-12">
+        <form data-ng-submit="create()" novalidate>
+            <fieldset>
+	<div class="row">
+                <div class="form-group col-md-2">
+                    <label class="control-label" for="enquiryNo">Enquiry Number</label>
+                        <input type="text" data-ng-model="enquiryNo" id="enquiryNo" class="form-control" placeholder="Eg: 00321" required>
+                </div>
+                <div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="enquiryDate">Enquiry Date</label>
+                        <input type="text" data-ng-model="enquiryDate" id="enquiryDate" class="form-control" placeholder="DD/MM/YYYY" required>
+                </div>
+                <div class="form-group col-md-4 col-md-offset-0.5">
+                    <label class="control-label" for="buyerName">Buyer Name</label>
+                        <input type="text" data-ng-model="buyerName" id="buyerName" class="form-control" placeholder="Eg: Sooraj Industries Pvt. Ltd." required>
+                </div>
+	</div>
+	<div class="row">
+                <div class="form-group col-md-4">
+                    <label class="control-label" for="styleName">Style Name</label>
+                        <input type="text" data-ng-model="styleName" id="styleName" class="form-control" placeholder="Eg: Slim fit" required>
+                </div>
+                <div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="styleNo">Style Number</label>
+                        <input type="text" data-ng-model="styleNo" id="styleNo" class="form-control" placeholder="Eg: 021" required>
+                </div>
+		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="orderQuantity">Order Quantity</label>
+                        <input type="text" data-ng-model="orderQuantity" id="orderQuantity" class="form-control" placeholder="Eg: 3500" required>
+                </div>
+ 		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="samplingRequiredQty">Sampling Required Quantity</label>
+                        <input type="text" data-ng-model="samplingRequiredQty" id="samplingRequiredQty" class="form-control" placeholder="Eg: 3600" required>
+                </div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-2">
+                    <label class="control-label" for="costingRequiredDate">Costing Required Date</label>
+                        <input type="text" data-ng-model="costingRequiredDate" id="costingRequiredDate" class="form-control" placeholder="DD/MM/YYYY" required>
+                </div>
+		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="samplingRequiredDate">Sampling Required Date</label>
+                        <input type="text" data-ng-model="samplingRequiredDate" id="samplingRequiredDate" class="form-control" placeholder="DD/MM/YYYY" required>
+                </div>
+	</div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

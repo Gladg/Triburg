@@ -1,0 +1,19 @@
+<section data-ng-controller="EntityAttributesDetailsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Entity attributes details</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="entityAttributesDetail in entityAttributesDetails" data-ng-href="#!/entity-attributes-details/{{entityAttributesDetail._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="entityAttributesDetail.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="entityAttributesDetail.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="entityAttributesDetail.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!entityAttributesDetails.$resolved || entityAttributesDetails.length">
+    	No Entity attributes details yet, why don't you <a href="/#!/entity-attributes-details/create">create one</a>?
+    </div>
+</section>

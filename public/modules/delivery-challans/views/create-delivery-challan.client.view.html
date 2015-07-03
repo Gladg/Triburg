@@ -1,0 +1,71 @@
+<section data-ng-controller="DeliveryChallansController">
+    <div class="page-header">
+        <h1>New Delivery challan</h1>
+    </div>
+    <div class="col-md-12">
+        <form data-ng-submit="create()" novalidate>
+            <fieldset>
+	<div class="row">
+		<div class="form-group col-md-4">
+                    <label class="control-label" for="party">Party</label>
+                        <input type="text" data-ng-model="party" id="party" class="form-control" placeholder="Eg: ABC Pvt. Ltd." required>
+                </div>
+                <div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="orderNo">Order number</label>
+                        <input type="text" data-ng-model="orderNo" id="orderNo" class="form-control" placeholder="Eg: 000763" required>
+                </div>
+		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="styleNo">Style number</label>
+                        <input type="text" data-ng-model="styleNo" id="styleNo" class="form-control" placeholder="Eg: 00723" required>
+                </div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-2">
+                    <label class="control-label" for="dCNo">Delivery challan no.</label>
+                        <input type="text" data-ng-model="dCNo" id="dCNo" class="form-control" placeholder="Eg: 008712" required>
+                </div>
+		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="dCDate">Delivery challan date</label>
+                        <input type="text" data-ng-model="dCDate" id="dCDate" class="form-control" placeholder="DD/MM/YYYY" required>
+                </div>
+		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="sLNo">Serial Number</label>
+                        <input type="text" data-ng-model="sLNo" id="sLNo" class="form-control" placeholder="Eg: 00877" required>
+                </div>
+		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="refNo">Reference number</label>
+                        <input type="text" data-ng-model="refNo" id="refNo" class="form-control" placeholder="Eg: 01234" required>
+                </div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-3">
+                    <label class="control-label" for="itemName">Item name</label>
+                        <input type="text" data-ng-model="itemName" id="itemName" class="form-control" placeholder="Eg: Sleeve" required>
+                </div>
+		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="uoM">Unit of measurement</label>
+                        <input type="text" data-ng-model="uoM" id="uoM" class="form-control" placeholder="Eg: Kgs" required>
+                </div>
+		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="units">Units</label>
+                        <input type="text" data-ng-model="units" id="units" class="form-control" placeholder="Eg: 100" required>
+                </div>
+		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="uoM2">Unit of measurement2</label>
+                        <input type="text" data-ng-model="uoM2" id="uoM2" class="form-control" placeholder="Eg: Kgs" required>
+                </div>
+		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="units2">Units2</label>
+                        <input type="text" data-ng-model="units2" id="units2" class="form-control" placeholder="Eg: 100" required>
+                </div>
+	</div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,27 @@
+<section data-ng-controller="EntityAttributesDetailsController">
+    <div class="page-header">
+        <h1>New Entity attributes detail</h1>
+    </div>
+    <div class="col-md-12">
+        <form data-ng-submit="create()" novalidate>
+            <fieldset>
+	<div class="row">
+                <div class="form-group col-md-4">
+                    <label class="control-label" for="attributename">Attribute name</label>
+                        <input type="text" data-ng-model="attributename" id="attributename" class="form-control" placeholder="Suitable name" required>
+                </div>
+		<div class="form-group col-md-4 col-md-offset-0.5">
+                    <label class="control-label" for="attributevalue">Attribute value</label>
+                        <input type="text" data-ng-model="attributevalue" id="attributevalue" class="form-control" placeholder="Suitable value" required>
+                </div>
+	</div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

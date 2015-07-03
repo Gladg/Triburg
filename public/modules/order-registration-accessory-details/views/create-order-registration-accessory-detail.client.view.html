@@ -1,0 +1,31 @@
+<section data-ng-controller="OrderRegistrationAccessoryDetailsController">
+    <div class="page-header">
+        <h1>New Order registration accessory detail</h1>
+    </div>
+    <div class="col-md-12">
+        <form data-ng-submit="create()" novalidate>
+            <fieldset>
+	<div class="row">
+                <div class="form-group col-md-4">
+                    <label class="control-label" for="accessoryTRIMSName">Accessory TrimName</label>
+                        <input type="text" data-ng-model="accessoryTRIMSName" id="accessoryTRIMSName" class="form-control" placeholder="Eg: " required>
+                </div>
+		 <div class="form-group col-md-3 col-md-offset-0.5">
+                    <label class="control-label" for="uoM">Units of measurement</label>
+                        <input type="text" data-ng-model="uoM" id="uoM" class="form-control" placeholder="Units of measurement" required>
+                </div>
+		 <div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="units">Name</label>
+                        <input type="text" data-ng-model="units" id="units" class="form-control" placeholder="Eg: 55" required>
+                </div>
+	</div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

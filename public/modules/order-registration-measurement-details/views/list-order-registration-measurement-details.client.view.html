@@ -1,0 +1,19 @@
+<section data-ng-controller="OrderRegistrationMeasurementDetailsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Order registration measurement details</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="orderRegistrationMeasurementDetail in orderRegistrationMeasurementDetails" data-ng-href="#!/order-registration-measurement-details/{{orderRegistrationMeasurementDetail._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="orderRegistrationMeasurementDetail.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="orderRegistrationMeasurementDetail.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="orderRegistrationMeasurementDetail.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!orderRegistrationMeasurementDetails.$resolved || orderRegistrationMeasurementDetails.length">
+    	No Order registration measurement details yet, why don't you <a href="/#!/order-registration-measurement-details/create">create one</a>?
+    </div>
+</section>

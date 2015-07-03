@@ -1,0 +1,65 @@
+<section data-ng-controller="VehicleLogsController">
+    <div class="page-header">
+        <h1>New Vehicle log</h1>
+    </div>
+    <div class="col-md-12">
+        <form data-ng-submit="create()" novalidate>
+            <fieldset>
+	<div class="row">
+                <div class="form-group col-md-2">
+                    <label class="control-label" for="weekStartingDate">Week starting date</label>
+                        <input type="text" data-ng-model="weekStartingDate" id="weekStartingDate" class="form-control" placeholder="DD/MM/YYYY" required>
+                </div>
+ 		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="startingKMReading">Start Km reading</label>
+                        <input type="text" data-ng-model="startingKMReading" id="startingKMReading" class="form-control" placeholder="Eg: 150" required>
+                </div>
+                <div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="endingKMReading">End Km reading</label>
+                        <input type="text" data-ng-model="endingKMReading" id="endingKMReading" class="form-control" placeholder="Eg: 200" required>
+                </div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-3">
+                    <label class="control-label" for="vehicleNo">Vehicle Number</label>
+                        <input type="text" data-ng-model="vehicleNo" id="vehicleNo" class="form-control" placeholder="Eg: TN 66-A-4653" required>
+                </div>
+		 <div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="date">Date</label>
+                        <input type="text" data-ng-model="date" id="date" class="form-control" placeholder="DD/MM/YYYY" required>
+                </div>
+               
+                <div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="driverName">Driver name</label>
+                        <input type="text" data-ng-model="driverName" id="driverName" class="form-control" placeholder="Eg: Kokki Kumar" required>
+                </div>
+	</div>
+	<div class="row">
+ 		<div class="form-group col-md-2">
+                    <label class="control-label" for="date1">Date</label>
+                        <input type="text" data-ng-model="date1" id="date1" class="form-control" placeholder="DD/MM/YYYY" required>
+                </div>
+                <div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="billNo">Bill Number</label>
+                        <input type="text" data-ng-model="billNo" id="billNo" class="form-control" placeholder="Eg: 000641" required>
+                </div>
+                <div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="ltrs">Litres</label>
+                        <input type="text" data-ng-model="ltrs" id="ltrs" class="form-control" placeholder="Eg: 50" required>
+                </div>
+                <div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="amount">Amount</label>
+                        <input type="text" data-ng-model="amount" id="amount" class="form-control" placeholder="Eg: 1000" required>
+                </div>
+	</div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
+

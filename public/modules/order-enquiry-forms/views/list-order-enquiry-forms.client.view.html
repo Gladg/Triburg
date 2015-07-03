@@ -1,0 +1,19 @@
+<section data-ng-controller="OrderEnquiryFormsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Order enquiry forms</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="orderEnquiryForm in orderEnquiryForms" data-ng-href="#!/order-enquiry-forms/{{orderEnquiryForm._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="orderEnquiryForm.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="orderEnquiryForm.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="orderEnquiryForm.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!orderEnquiryForms.$resolved || orderEnquiryForms.length">
+    	No Order enquiry forms yet, why don't you <a href="/#!/order-enquiry-forms/create">create one</a>?
+    </div>
+</section>
