@@ -9,7 +9,13 @@ angular.module('knitting-programs').controller('KnittingProgramsController', ['$
 		$scope.create = function() {
 			// Create new Knitting program object
 			var knittingProgram = new KnittingPrograms ({
-				name: this.name
+				orderNo: this.orderNo,
+				styleNo: this.styleNo,
+				workOrderNo: this.workOrderNo,
+				workOrderDate: this.workOrderDate,
+				party: this.party,
+				requiredDate: this.requiredDate,
+				remarks: this.remarks
 			});
 
 			// Redirect after save

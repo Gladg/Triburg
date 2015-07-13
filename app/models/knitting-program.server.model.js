@@ -52,48 +52,6 @@ var KnittingProgramSchema = new Schema({
 		required: 'Please fill relevant remarks',
 		trim: true
 	},
-	sLNo: {
-		type: Number,
-		default: '',
-		required: 'Please fill Knitting program serial number',
-		trim: false
-	},
-	fabricType: {
-		type: String,
-		default: '',
-		required: 'Please fill Knitting program fabric type',
-		trim: false
-	},
-	gauge: {
-		type: String,
-		default: '',
-		required: 'Please fill Knitting program name',
-		trim: true
-	},
-	gREYGSM: {
-		type: String,
-		default: '',
-		required: 'Please fill Knitting program name',
-		trim: true
-	},
-	gREYTexture: {
-		type: String,
-		default: '',
-		required: 'Please fill Knitting program name',
-		trim: true
-	},
-	dia: {
-		type: String,
-		default: '',
-		required: 'Please fill Knitting program name',
-		trim: true
-	},
-	weight: {
-		type: Number,
-		default: '',
-		required: 'Please fill Knitting program weight',
-		trim: false
-	},
 	created: {
 		type: Date,
 		default: Date.now
@@ -105,28 +63,3 @@ var KnittingProgramSchema = new Schema({
 });
 
 mongoose.model('KnittingProgram', KnittingProgramSchema);
-
-
-orderNo
-styleNo
-workOrderNo
-workOrderDate
-party
-requiredDate
-remarks
-sLNo
-fabricType
-gauge
-gREYGSM
-gREYTexture
-dia
-weight(Kgs)
-
-
-
-	weight: {
-		type: String,
-		default: '',
-		required: 'Please fill Knitting program name',
-		trim: true
-	},

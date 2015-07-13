@@ -1,0 +1,19 @@
+<section data-ng-controller="KnittingProgramFabricDetailsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Knitting program fabric details</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="knittingProgramFabricDetail in knittingProgramFabricDetails" data-ng-href="#!/knitting-program-fabric-details/{{knittingProgramFabricDetail._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="knittingProgramFabricDetail.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="knittingProgramFabricDetail.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="knittingProgramFabricDetail.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!knittingProgramFabricDetails.$resolved || knittingProgramFabricDetails.length">
+    	No Knitting program fabric details yet, why don't you <a href="/#!/knitting-program-fabric-details/create">create one</a>?
+    </div>
+</section>
