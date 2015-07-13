@@ -1,0 +1,73 @@
+<section data-ng-controller="CostingSheetsController">
+    <div class="page-header">
+        <h1>New Costing sheet</h1>
+    </div>
+    <div class="col-md-12">
+        <form data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="orderNo">Order number</label>
+                        <input type="text" data-ng-model="orderNo" id="orderNo" class="form-control" placeholder="Eg: 000345" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="styleNo">Style number</label>
+                        <input type="text" data-ng-model="styleNo" id="styleNo" class="form-control" placeholder="Eg: 00342" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="description">Description</label>
+                        <input type="text" data-ng-model="description" id="description" class="form-control" placeholder="Enter relevant description" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="deliverydate">Delivery date</label>
+                        <input type="text" data-ng-model="deliverydate" id="deliverydate" class="form-control" placeholder="DD/MM/YYYY" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="gSM">GSM</label>
+                        <input type="text" data-ng-model="gSM" id="gSM" class="form-control" placeholder="Eg: 400" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="yarnCount">Yarn count</label>
+                        <input type="text" data-ng-model="yarnCount" id="yarnCount" class="form-control" placeholder="Eg: 100" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="orderQuantity">Order quantity</label>
+                        <input type="text" data-ng-model="orderQuantity" id="orderQuantity" class="form-control" placeholder="Eg: 5000" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="buyerName">Buyer name</label>
+                        <input type="text" data-ng-model="buyerName" id="buyerName" class="form-control" placeholder="Eg: Ramam and Co." required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="sLNo">Serial number</label>
+                        <input type="text" data-ng-model="sLNo" id="sLNo" class="form-control" placeholder="Eg: 009834" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="itemName">Item name</label>
+                        <input type="text" data-ng-model="itemName" id="itemName" class="form-control" placeholder="Eg: Sleeve" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="uoM">Unit of measurement</label>
+                        <input type="text" data-ng-model="uoM" id="uoM" class="form-control" placeholder="Eg: Grams" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="units">Units</label>
+                        <input type="text" data-ng-model="units" id="units" class="form-control" placeholder="Eg: 500" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="unitCost1">First unit cost</label>
+                        <input type="text" data-ng-model="unitCost1" id="unitCost1" class="form-control" placeholder="Eg: 50" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="unitCost2">Second unit cost</label>
+                        <input type="text" data-ng-model="unitCost2" id="unitCost2" class="form-control" placeholder="Eg: 150" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

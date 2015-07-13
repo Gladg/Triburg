@@ -1,0 +1,19 @@
+<section data-ng-controller="GoodsReceivedNotesController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Goods received notes</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="goodsReceivedNote in goodsReceivedNotes" data-ng-href="#!/goods-received-notes/{{goodsReceivedNote._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="goodsReceivedNote.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="goodsReceivedNote.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="goodsReceivedNote.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!goodsReceivedNotes.$resolved || goodsReceivedNotes.length">
+    	No Goods received notes yet, why don't you <a href="/#!/goods-received-notes/create">create one</a>?
+    </div>
+</section>

@@ -76,7 +76,7 @@ var PackingListSchema = new Schema({
 		required: 'Please fill Packing list bundle pieces number',
 		trim: false
 	},
- 	CsLNo: {
+ 	csLNo: {
 		type: Number,
 		default: '',
 		required: 'Please fill carton serial number',

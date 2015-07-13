@@ -1,0 +1,69 @@
+<section data-ng-controller="YarnPurchaseOrdersController">
+    <div class="page-header">
+        <h1>New Yarn purchase order</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="orderNo">Order number</label>
+                        <input type="text" data-ng-model="orderNo" id="orderNo" class="form-control" placeholder="Eg: 000342" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="styleNo">Style number</label>
+                        <input type="text" data-ng-model="styleNo" id="styleNo" class="form-control" placeholder="Eg: 000343" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="supplier">Supplier</label>
+                        <input type="text" data-ng-model="supplier" id="supplier" class="form-control" placeholder="Eg: Rock-fort Suppliers" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="pONo">Purchase order number</label>
+                        <input type="text" data-ng-model="pONo" id="pONo" class="form-control" placeholder="Eg: ORD-0034" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="pODate">Purchase order date</label>
+                        <input type="text" data-ng-model="pODate" id="pODate" class="form-control" placeholder="DD/MM/YYYY" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="deliveryDate">Delivery date</label>
+                        <input type="text" data-ng-model="deliveryDate" id="deliveryDate" class="form-control" placeholder="DD/MM/YYYY" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="payment">Payment</label>
+                        <input type="text" data-ng-model="payment" id="payment" class="form-control" placeholder="Eg: 10000" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="specialNote">Special note</label>
+                        <input type="text" data-ng-model="specialNote" id="specialNote" class="form-control" placeholder="Enter relevant notes" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="sLNo">Serial number</label>
+                        <input type="text" data-ng-model="sLNo" id="sLNo" class="form-control" placeholder="Eg: 000233" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="yarnDescription">Yarn description</label>
+                        <input type="text" data-ng-model="yarnDescription" id="yarnDescription" class="form-control" placeholder="Enter relevant description" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="count">Count</label>
+                        <input type="text" data-ng-model="count" id="count" class="form-control" placeholder="Eg: 2500" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="color">Color</label>
+                        <input type="text" data-ng-model="color" id="color" class="form-control" placeholder="Eg: Orange" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="quantity">Quantity</label>
+                        <input type="text" data-ng-model="quantity" id="quantity" class="form-control" placeholder="Eg: 5600" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

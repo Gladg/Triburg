@@ -1,0 +1,65 @@
+<section data-ng-controller="GoodsReceivedNotesController">
+    <div class="page-header">
+        <h1>New Goods received note</h1>
+    </div>
+    <div class="col-md-12">
+        <form data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="orderNo">Order number</label>
+                        <input type="text" data-ng-model="orderNo" id="orderNo" class="form-control" placeholder="Eg: 000454" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="styleNo">Style number</label>
+                        <input type="text" data-ng-model="styleNo" id="styleNo" class="form-control" placeholder="Eg: 000343" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="party">Party</label>
+                        <input type="text" data-ng-model="party" id="party" class="form-control" placeholder="Eg: Raja and Raja Co." required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="dCNo">Delivery challan number</label>
+                        <input type="text" data-ng-model="dCNo" id="dCNo" class="form-control" placeholder="Eg: 004536" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="dCDate">delivery challan date</label>
+                        <input type="text" data-ng-model="dCDate" id="dCDate" class="form-control" placeholder="DD/MM/YYYY" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="sLNo">Serial number</label>
+                        <input type="text" data-ng-model="sLNo" id="sLNo" class="form-control" placeholder="Eg: 003433" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="refNo">Referral number</label>
+                        <input type="text" data-ng-model="refNo" id="refNo" class="form-control" placeholder="Eg: 003433" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="itemName">Item name</label>
+                        <input type="text" data-ng-model="itemName" id="itemName" class="form-control" placeholder="Eg: Collar" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="uoM">Unit of measurement</label>
+                        <input type="text" data-ng-model="uoM" id="uoM" class="form-control" placeholder="Eg: Kgs" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="units">Units</label>
+                        <input type="text" data-ng-model="units" id="units" class="form-control" placeholder="Eg: 500" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="uoM2">Second unit of measurement</label>
+                        <input type="text" data-ng-model="uoM2" id="uoM2" class="form-control" placeholder="Eg: Kgs" required>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="units2">Second units</label>
+                        <input type="text" data-ng-model="units2" id="units2" class="form-control" placeholder="Eg: 500" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
