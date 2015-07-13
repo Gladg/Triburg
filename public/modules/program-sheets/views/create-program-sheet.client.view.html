@@ -1,0 +1,63 @@
+<section data-ng-controller="ProgramSheetsController">
+    <div class="page-header">
+        <h1>New Program sheet</h1>
+    </div>
+    <div class="col-md-12">
+        <form data-ng-submit="create()" novalidate>
+            <fieldset>
+	<div class="row">
+                <div class="form-group col-md-2">
+                    <label class="control-label" for="orderNo">Order number</label>
+                        <input type="text" data-ng-model="orderNo" id="orderNo" class="form-control" placeholder="Eg: 000345" required>
+                </div>
+		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="styleNo">Style number</label>
+                        <input type="text" data-ng-model="styleNo" id="styleNo" class="form-control" placeholder="Eg: 000123" required>
+                </div>
+		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="workOrderNo">Work order number</label>
+                        <input type="text" data-ng-model="workOrderNo" id="workOrderNo" class="form-control" placeholder="Eg: 004353" required>
+                </div>
+		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="workOrderDate">Work order date</label>
+                        <input type="text" data-ng-model="workOrderDate" id="workOrderDate" class="form-control" placeholder="dd/MM/YYYY" required>
+                </div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-4">
+                    <label class="control-label" for="operatorName">Operator name</label>
+                        <input type="text" data-ng-model="operatorName" id="operatorName" class="form-control" placeholder="Eg: Mr. Bino Balan" required>
+                </div>
+		<div class="form-group col-md-4 col-md-offset-0.5">
+                    <label class="control-label" for="operationName">Operation name</label>
+                        <input type="text" data-ng-model="operationName" id="operationName" class="form-control" placeholder="Eg: Cutting" required>
+                </div>
+	</div>
+	<div class="row">
+		<div class="form-group col-md-2">
+                    <label class="control-label" for="sLNo">Serial number</label>
+                        <input type="text" data-ng-model="sLNo" id="sLNo" class="form-control" placeholder="Eg: 000324" required>
+                </div>
+		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="color">Color</label>
+                        <input type="text" data-ng-model="color" id="color" class="form-control" placeholder="Eg: Orange" required>
+                </div>
+		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="size">Size</label>
+                        <input type="text" data-ng-model="size" id="size" class="form-control" placeholder="Eg: Large" required>
+                </div>
+		<div class="form-group col-md-2 col-md-offset-0.5">
+                    <label class="control-label" for="quantity">Quantity</label>
+                        <input type="text" data-ng-model="quantity" id="quantity" class="form-control" placeholder="Eg: 1000" required>
+                </div>
+	</div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

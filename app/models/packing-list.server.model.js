@@ -46,79 +46,79 @@ var PackingListSchema = new Schema({
 		required: 'Please fill Packing list date',
 		trim: false
 	},
- 	sLNo: {
+ 	asLNo: {
 		type: Number,
 		default: '',
 		required: 'Please fill assortment serial number',
 		trim: false
 	},
-	bundleDescription: {
+	abundleDescription: {
 		type: String,
 		default: '',
 		required: 'Please fill bundle description',
 		trim: true
 	},
-	size: {
-		type: number,
+	asize: {
+		type: Number,
 		default: '',
 		required: 'Please fill Packing list bundle size',
 		trim: false
 	},
-	color: {
+	acolor: {
 		type: String,
 		default: '',
 		required: 'Please fill Packing list bundle color',
 		trim: false
 	},
-	pcs: {
+	apcs: {
 		type: Number,
 		default: '',
 		required: 'Please fill Packing list bundle pieces number',
 		trim: false
 	},
- 	sLNo1: {
+ 	CsLNo: {
 		type: Number,
 		default: '',
 		required: 'Please fill carton serial number',
 		trim: false
 	},
-	cartonNo: {
+	ccartonNo: {
 		type: Number,
 		default: '',
 		required: 'Please fill Packing list carton number',
 		trim: false
 	},
-	color: {
+	ccolor: {
 		type: String,
 		default: '',
 		required: 'Please fill Packing list carton color',
 		trim: false
 	},
-	size: {
+	csize: {
 		type: Number,
 		default: '',
 		required: 'Please fill Packing list carton size',
 		trim: false
 	},
-	uoM: {
+	cuoM: {
 		type: String,
 		default: '',
 		required: 'Please fill Packing list unit of measurement',
 		trim: false
 	},
-	units: {
+	cunits: {
 		type: Number,
 		default: '',
 		required: 'Please fill Packing list units',
 		trim: false
 	},
-	netWt: {
+	cnetWt: {
 		type: Number,
 		default: '',
 		required: 'Please fill Packing list net weight',
 		trim: false
 	},
-	grsWt: {
+	cgrsWt: {
 		type: Number,
 		default: '',
 		required: 'Please fill Packing list gross weight',
@@ -135,33 +135,3 @@ var PackingListSchema = new Schema({
 });
 
 mongoose.model('PackingList', PackingListSchema);
-
-
-orderNo
-styleNo
-description
-buyerName
-packingListNo
-packingListDate
-sLNo
-bundleDescription
-size
-color
-pcs
-sLNo1
-cartonNo
-color
-size
-uoM
-units
-netWt
-grsWt
-
-
-
-	name: {
-		type: String,
-		default: '',
-		required: 'Please fill Packing list name',
-		trim: true
-	},

@@ -9,26 +9,25 @@ angular.module('packing-lists').controller('PackingListsController', ['$scope', 
 		$scope.create = function() {
 			// Create new Packing list object
 			var packingList = new PackingLists ({
-				name: this.name
-orderNo: this.orderNo
-styleNo: this.styleNo
-description: this.description
-buyerName: this.buyerName
-packingListNo: this.
-packingListDate: this.
-sLNo: this.
-bundleDescription: this.
-size: this.
-color: this.
-pcs: this.
-sLNo: this.
-cartonNo: this.
-color: this.
-size: this.
-uoM: this.
-units: this.
-netWt: this.
-grsWt: this.
+				orderNo: this.orderNo,
+				styleNo: this.styleNo,
+				description: this.description,
+				buyerName: this.buyerName,
+				packingListNo: this.packingListNo,
+				packingListDate: this.packingListDate,
+				asLNo: this.asLNo,
+				abundleDescription: this.abundleDescription,
+				asize: this.asize,
+				acolor: this.acolor,
+				apcs: this.apcs,
+				csLNo: this.csLNo,
+				ccartonNo: this.ccartonNo,
+				ccolor: this.ccolor,
+				csize: this.csize,
+				cuoM: this.cuoM,
+				cunits: this.cunits,
+				cnetWt: this.cnetWt,
+				cgrsWt: this.cgrsWt
 			});
 
 			// Redirect after save
